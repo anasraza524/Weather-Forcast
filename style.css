@@ -1,0 +1,51 @@
+body{
+
+max-height: 120vh;
+
+}
+.forcastDiv{
+
+    width: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+.forcastDiv::-webkit-scrollbar {
+    display: none;
+    /* Chrome */
+}
+.forcastCard{
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    height: 180px;
+    /* width: 1200px; not working */
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.forcastDiv>.forcastCard>.day{
+    font-size: 24px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 15px;
+    padding: 20px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.593);
+}
+.border{
+display: flex;
+flex-direction: column;
+align-items: center;
+border: rgba(0, 0, 0, 0.575) solid 1px;
+    padding: 15px 15px 10px 15px
+}
