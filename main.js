@@ -10,9 +10,7 @@ function weatherForcast() {
             console.log(response);
 
 
-//             let icon = response.data.list[0].weather[0.].icon;
-           
-// document.getElementById("icon").src = `https:${icon}`; 
+
 
             let dayWise = [];
             let dateOfMonth = null;
@@ -39,6 +37,7 @@ function weatherForcast() {
 console.log("sh",previousEachHour, currentEachHour)
                      
                     let sumTemp = Number(previousEachHour.main.temp) + Number(currentEachHour.main.temp)
+                    
                     let sumMinTemp = Number(previousEachHour.main.temp_min) + Number(currentEachHour.main.temp_min)
                     let sumMaxTemp = Number(previousEachHour.main.temp_max) + Number(currentEachHour.main.temp_max)
                    let sumsea_level =Number(previousEachHour.main.sea_level) + Number(currentEachHour.main.sea_level)
@@ -82,6 +81,7 @@ console.log("sh",previousEachHour, currentEachHour)
                     <div class="forcastCard">
         <div class="border">   
 <span class="day">${moment(eachDay.dt_txt).format('ddd')}</span>
+<img class="img" src="http://openweathermap.org/img/wn/${eachDay.icon}@2x.png" alt="">
 
 <div class="Min">Temp Min: ${Math.floor(eachDay.main.temp_min / eachDay.length)}</div>
 <div class="Max">Temp Max: ${Math.floor(eachDay.main.temp_max / eachDay.length)}</div>
@@ -90,6 +90,8 @@ console.log("sh",previousEachHour, currentEachHour)
                     `
 
             })
+
+            
 
 
         })
