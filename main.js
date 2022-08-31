@@ -34,7 +34,7 @@ function weatherForcast() {
             dayWise = dayWise.map((eachDay) => {
 
                 return eachDay.reduce((previousEachHour, currentEachHour) => {
-console.log("sh",previousEachHour, currentEachHour)
+console.log("prevouis",previousEachHour,"Current", currentEachHour)
                      
                     let sumTemp = Number(previousEachHour.main.temp) + Number(currentEachHour.main.temp)
                     
@@ -78,7 +78,7 @@ console.log("sh",previousEachHour, currentEachHour)
                 document.querySelector("#forcastDiv").innerHTML +=
                     `
 
-                    <div class="forcastCard">
+                    <div onclick="WeatherHourWise(e)" class="forcastCard">
         <div class="border">   
 <span class="day">${moment(eachDay.dt_txt).format('ddd')}</span>
 <img class="img" src="http://openweathermap.org/img/wn/${eachDay.icon}@2x.png" alt="">
@@ -100,3 +100,8 @@ console.log("sh",previousEachHour, currentEachHour)
             console.log(error);
         })
     }
+function WeatherHourWise(){
+
+
+
+}  
