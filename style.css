@@ -1,7 +1,7 @@
 body{
 
 max-height: 120vh;
-
+/* background-image: url('https://source.unsplash.com/1600x900/?nature'); */
 }
 .forcastDiv{
 
@@ -54,4 +54,67 @@ border: rgba(0, 0, 0, 0.575) solid 1px;
 
 
 
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 50px;
+  }
   
+  .flex {
+    /* display: flex;
+    
+    align-items: center; */
+  }
+.icon{
+  
+  position:  absolute;
+  left: 45%;
+  bottom: 15%;
+
+  height:350px;
+   width:260px;
+}
+.regon{
+  text-transform: uppercase;
+font-size: 12px;
+margin-top: -20px;
+padding: 2px;
+}
+
+
+
+b{
+  font-size: 37px;
+}
+
+  .description {
+    text-transform: capitalize;
+    position:  absolute;
+    left: 55%;
+    bottom: 20%;
+    font-size: 40px;
+  }
+  .card{
+    
+  padding: 50px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  padding: 1.5em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 500px;
+  margin: 2em;
+  margin-left: 15em;
+  }
+  .boxWeather{
+  display: flex;
+  justify-content: center;
+
+  }
+  /* #hidden_weather{
+    visibility: hidden;} */

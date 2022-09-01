@@ -1,6 +1,7 @@
 
 
 
+
 function weatherForcast() {
 
     const city = document.querySelector("#city").value;
@@ -75,11 +76,14 @@ console.log("prevouis",previousEachHour,"Current", currentEachHour)
 
             dayWise.map(eachDay => {
 
+               
                 document.querySelector("#forcastDiv").innerHTML +=
+        
                     `
 
-                    <div onclick="WeatherHourWise(e)" class="forcastCard">
+                    <div onclick="handler(event)" class="forcastCard">
         <div class="border">   
+        
 <span class="day">${moment(eachDay.dt_txt).format('ddd')}</span>
 <img class="img" src="http://openweathermap.org/img/wn/${eachDay.icon}@2x.png" alt="">
 
@@ -88,6 +92,7 @@ console.log("prevouis",previousEachHour,"Current", currentEachHour)
 </div>
 
                     `
+                        
 
             })
 
@@ -100,8 +105,40 @@ console.log("prevouis",previousEachHour,"Current", currentEachHour)
             console.log(error);
         })
     }
-function WeatherHourWise(){
 
 
 
-}  
+
+
+    function handler(event) {
+
+         console.log(event);
+
+         let ev = event.path[1].childNodes[1];
+         console.log("ev",ev)
+        //  document.querySelector(".card")
+        //  .classList.remove("#hidden_weather");
+         document.querySelector(".card").innerHTML +=
+         `
+         
+         <div class="weather_loading" >
+       
+         <span> <h2 class="city">Weather in <b > </b>
+         </h2><h5 class="regon">sindh pakistan</h5>
+         <div class="time">4:00Pm</div>
+         <div class="dayAndDate"></div>
+         <div class="Date">May/2022</div>  
+           <h1 class="temp">51°C</h1></span>
+           <div class="Tem_min">51°C</div>
+           <div class="Tem_max">51°C</div>  
+             <div class="humidity">Humidity: 60%</div>
+             <div class="wind">Wind speed: 6.2 km/h</div>
+             <div class="wind">Sea Level: 6.2 km/h</div>
+             <div class="wind">Feels Like: 6.2 km/h</div>
+             <span class="boxWeather">
+               <img src="https://openweathermap.org/img/wn/04n.png" alt="not Found" class="icon" />
+               <div class="description">Cloudy</div>
+             </span>
+             </div>
+           </div>`
+}
